@@ -406,7 +406,7 @@ class PHPExcel_Worksheet implements PHPExcel_IComparable
 	}
 
    /**
-     * Return the cache controller for the cell collection
+     * Return the cache ctrl for the cell collection
      *
      * @return PHPExcel_CachedObjectStorage_xxx
      */
@@ -2552,7 +2552,7 @@ class PHPExcel_Worksheet implements PHPExcel_IComparable
 	public function garbageCollect() {
         // Flush cache
         $this->_cellCollection->getCacheData('A1');
-        // Build a reference table from images
+        // Build a reference table from img
 //        $imageCoordinates = array();
 //        $iterator = $this->getDrawingCollection()->getIterator();
 //        while ($iterator->valid()) {

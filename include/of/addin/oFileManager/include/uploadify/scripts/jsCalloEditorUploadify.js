@@ -93,7 +93,7 @@ function jsCalloEditorUploadify(uploadifyId, callbackObj, fileExt, buttonText, w
         }
         if( version === false )
         {
-            var temp = ['<img src="' + ROOT_URL + oFileManagerMainDir + '/images/flashInstall.jpg" style="width:' +width+ 'px; height:' +height+ 'px" />', uploadifyObj.parents('a')];
+            var temp = ['<img src="' + ROOT_URL + oFileManagerMainDir + '/img/flashInstall.jpg" style="width:' +width+ 'px; height:' +height+ 'px" />', uploadifyObj.parents('a')];
             if( temp[1].length )
             {
                 temp[1].attr({'target' : '_blank', 'href' : 'http://get.adobe.com/flashplayer/', 'onclick' : null})

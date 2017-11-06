@@ -5,7 +5,8 @@ return array(
     //域名到产品根目录地址,根路径为空字符串,null=自动计算
     'rootUrl'     => null,
     //配置文件路径, 数组=动态配置{动态键 : 配置路径}, 字符串=等同{"0" : 全局配置}
-    'config'      => '/demo/config.php',
+    //'config'      => '/demo/config.php', //Demo示例
+    'config'      => null,
     //系统时区, 设置php支持的时区(如: Europe/London 支持夏令时), 读取格式为 ±00:00
     'timezone'    => 'PRC',
     //统一调试模式, true=开发环境, null=测试环境, false=生产环境, 字符串=切换调试环境密码
@@ -21,7 +22,7 @@ return array(
         //默认视图模板模板路径
         'tplPath' => '/view',
         //全局标题
-        'title'   => ' oFrame 框架 http://phpof.net/',
+        'title'   => ' It dream works',
     ),
     //数据库连接池
     'db'          => array(
@@ -34,8 +35,8 @@ return array(
             'host'       => '127.0.0.1',
             'port'       => 3306,
             'user'       => 'root',
-            'password'   => 'admin',
-            'database'   => 'test',
+            'password'   => '330lzz',
+            'database'   => 'itdreamworks',
             'charset'    => 'utf8',
             //数据库时区, 默认true=框架时区, false=数据库时区, "±00:00"=指定时区
             'timezone'   => true,

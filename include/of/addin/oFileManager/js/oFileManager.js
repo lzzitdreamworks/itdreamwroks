@@ -59,7 +59,7 @@ $(function() {
                 function()
                 {
                     $(window).trigger('resize');
-                    $('td.menuSwitch').children('img').attr('src',$('td.menu').css('display')=='none'?'images/menuSwitchOn.gif':'images/menuSwitchOff.gif');
+                    $('td.menuSwitch').children('img').attr('src',$('td.menu').css('display')=='none'?'img/menuSwitchOn.gif':'img/menuSwitchOff.gif');
                 }
             );
         }
@@ -586,7 +586,7 @@ function filePreview()
             $('.footer div span').css('opacity',0).html(phpUrlCode.rawurldecode(thisUnescapeDirUrl)).animate({opacity: "1"},"fast");
             
             //增加下载
-            $('<div id="fileDownload" ><img src="images/fileDown.gif" /><strong><a href="'+phpUrlCode.rawurlencode(rootDirUrl+thisUnescapeDirUrl)+'" title="一些如swf,txt,jpg等格式请右键另存为" target="_blank" >下载</a></strong></div>').css('opacity',0.4).appendTo($(this))
+            $('<div id="fileDownload" ><img src="img/fileDown.gif" /><strong><a href="'+phpUrlCode.rawurlencode(rootDirUrl+thisUnescapeDirUrl)+'" title="一些如swf,txt,jpg等格式请右键另存为" target="_blank" >下载</a></strong></div>').css('opacity',0.4).appendTo($(this))
             .mouseenter(
                 function()
                 {

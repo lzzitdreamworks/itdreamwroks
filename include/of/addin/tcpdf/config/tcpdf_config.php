@@ -60,7 +60,7 @@
 //define ('K_PATH_FONTS', K_PATH_MAIN.'fonts/');
 
 /**
- * Default images directory.
+ * Default img directory.
  * By default it is automatically set but you can also set it as a fixed string to improve performances.
  */
 //define ('K_PATH_IMAGES', '');

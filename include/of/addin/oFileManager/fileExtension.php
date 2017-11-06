@@ -66,7 +66,7 @@ class fileExtension
     * $pixel - 尺寸大小，如：400*300
     * $_quality - 图片质量，默认75
     * $cut - 是否裁剪，默认1，当$cut=0的时候，将不进行裁剪
-    * 示例："< img src=\"".MiniImg('images/image.jpg','300*180',72,0)."\">"
+    * 示例："< img src=\"".MiniImg('img/image.jpg','300*180',72,0)."\">"
     **/
     private function MiniImg($srcFile, $outFileDir=null, $cache=true, $pixel='300*200', $_quality = 75, $cut=0){
         ini_set('max_execution_time', 0);

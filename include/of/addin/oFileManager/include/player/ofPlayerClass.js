@@ -332,7 +332,7 @@ function ofPlayerClass(obj)
         if( version === false )
         {
             this.$(obj.obj).innerHTML = '<a target="_blank" href="http://get.adobe.com/flashplayer/">' +
-                '<img src="' + obj.url.substr(0, obj.url.length - 28) + '/images/flashInstall.jpg"/>' +
+                '<img src="' + obj.url.substr(0, obj.url.length - 28) + '/img/flashInstall.jpg"/>' +
             '</a>';
             return ;
         }

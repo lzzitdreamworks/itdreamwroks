@@ -36,7 +36,7 @@ class PHPWord_Media
      * @var array
      */
     private static $_sectionMedia = array(
-        'images' => array(),
+        'img' => array(),
         'embeddings' => array(),
         'links' => array()
     );
@@ -73,10 +73,10 @@ class PHPWord_Media
     public static function addSectionMediaElement($src, $type, PHPWord_Section_MemoryImage $memoryImage = null)
     {
         $mediaId = md5($src);
-        $key = ($type === 'image') ? 'images' : 'embeddings';
+        $key = ($type === 'image') ? 'img' : 'embeddings';
 
         if (!array_key_exists($mediaId, self::$_sectionMedia[$key])) {
-            $cImg = self::countSectionMediaElements('images');
+            $cImg = self::countSectionMediaElements('img');
             $cObj = self::countSectionMediaElements('embeddings');
             $rID = self::countSectionMediaElements() + 7;
 
@@ -164,7 +164,7 @@ class PHPWord_Media
             return self::$_sectionMedia[$key];
         }
 
-        $arrImages = self::$_sectionMedia['images'];
+        $arrImages = self::$_sectionMedia['img'];
         $arrObjects = self::$_sectionMedia['embeddings'];
         $arrLinks = self::$_sectionMedia['links'];
         return array_merge($arrImages, $arrObjects, $arrLinks);
@@ -182,7 +182,7 @@ class PHPWord_Media
             return count(self::$_sectionMedia[$key]);
         }
 
-        $cImages = count(self::$_sectionMedia['images']);
+        $cImages = count(self::$_sectionMedia['img']);
         $cObjects = count(self::$_sectionMedia['embeddings']);
         $cLinks = count(self::$_sectionMedia['links']);
         return ($cImages + $cObjects + $cLinks);
