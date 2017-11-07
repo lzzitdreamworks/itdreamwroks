@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>YKSUI框架 - 时间轴</title>
+    <script src="jsLoad/code/load.js" include="../top.html"></script>
+    <!--加css-->
+    <style>
+
+        .red-content h2 {
+            padding: 10px;
+            background: #ee4d4d;
+            color: #fff;
+            margin: -12px -12px 0 -11px;
+            font-weight: 500;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            -ms-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .green-content h2 {
+            padding: 10px;
+            /*background: #1ab394;*/
+            background:#f5f5f5;
+
+            margin: -12px -12px 0 -11px;
+            font-weight: 500;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            -ms-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .yellow-content h2 {
+            padding: 10px;
+            background: #f8ac59;
+            color: #fff;
+            margin: -12px -12px 0 -11px;
+            font-weight: 500;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            -ms-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .blue-content h2 {
+            padding: 10px;
+            background:  #1c84c6;
+            color: #fff;
+            margin: -12px -12px 0 -11px;
+            font-weight: 500;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            -ms-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .w {
+            background: #ee4d4d;
+        }
+
+        .g {
+            background:#1c84c6;
+        }
+
+        .l20 {
+            padding-left: 55px;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="wrapper wrapper-content">
+
+            <div class="row animated fadeInRight">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>项目需求管理系统里程碑</h5>
+
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <h5 class="l20">预计里程碑 &nbsp;|
+                                        <small>
+                                            <span class="label label-success g">提前</span>
+                                            <span class="label label-warning">预警</span>
+                                            <span class="label label-danger w">延期</span></small>
+                                    </h5>
+                                    <div id="vertical-timeline" class="vertical-container dark-timeline">
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon navy-bg">
+                                                <i class="fa fa-briefcase"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content green-content">
+                                                <h2 class="text-primary">需求</h2>
+
+                                                <p>
+                                                    上一年的销售业绩发布会。总结产品营销和销售趋势及销售的现状。</p>                                                </p>
+                                            <span class="vertical-date">
+                                        张三 <small>2017年2月3日</small>
+                                    </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon blue-bg">
+                                                <i class="fa fa-file-text"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content green-content">
+                                                <h2 class="text-success">模块</h2>
+
+                                                <p>发送上年度《销售业绩报告》</p>
+                                                  <span class="vertical-date">李四<small>2月3日</small>
+                                    </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon lazur-bg">
+                                                <i class="fa fa-coffee"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content green-content">
+                                                <h2 class="text-info">开发中</h2>
+
+                                                <p>啦啦啦~~</p>
+                                                <span class="vertical-date">李生<small>2月2日</small></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon yellow-bg">
+                                                <i class="glyphicon glyphicon-grain"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content green-content">
+                                                <h2>实施</h2>
+
+                                                <p>给李四打电话分配本月工作任务</p>
+                                                <span class="vertical-date">张**<small>2月2日</small></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon lazur-bg">
+                                                <i class="glyphicon glyphicon-ok"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content green-content">
+                                                <h2>结项</h2>
+
+                                                <p>发年终奖啦，啦啦啦~~</p>
+                                                <span class="vertical-date">张**<small>2月1日</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="l20">实际里程碑 &nbsp;|
+                                        <small>
+                                            <span class="label label-success g">提前</span>
+                                            <span class="label label-warning">预警</span>
+                                            <span class="label label-danger w">延期</span></small>
+                                    </h5>
+                                    <div id="vertical-timeline" class="vertical-container dark-timeline">
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon navy-bg">
+                                                <i class="fa fa-briefcase"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content green-content">
+                                                <h2 class="text-primary">需求</h2>
+
+                                                <p>
+                                                    上一年的销售业绩发布会。总结产品营销和销售趋势及销售的现状。</p>                                                </p>
+                                            <span class="vertical-date">
+                                        张三 <small>2017年2月3日</small>
+                                    </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon blue-bg">
+                                                <i class="fa fa-file-text"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content blue-content">
+                                                <h2 class="text-success">模块 </h2>
+
+                                                <p>发送上年度《销售业绩报告》</p>
+                                               <span class="vertical-date">李四<small>2月3日</small>
+                                    </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon lazur-bg">
+                                                <i class="fa fa-coffee"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content red-content">
+                                                <h2 class="text-info">开发中</h2>
+
+                                                <p>啦啦啦~~</p>
+                                                <span class="vertical-date">李生<small>2月2日</small></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon yellow-bg">
+                                                <i class="glyphicon glyphicon-grain"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content green-content">
+                                                <h2>实施</h2>
+
+                                                <p>给李四打电话分配本月工作任务</p>
+                                                <span class="vertical-date">张**<small>2月2日</small></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-block">
+                                            <div class="vertical-timeline-icon lazur-bg">
+                                                <i class="glyphicon glyphicon-ok"></i>
+                                            </div>
+
+                                            <div class="vertical-timeline-content yellow-content">
+                                                <h2>结项</h2>
+
+                                                <p>发年终奖啦，啦啦啦~~</p>
+                                                <span class="vertical-date">张**<small>2月1日</small></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<script src="jsLoad/code/load.js" include="../js.html"></script>
+<!--加本页面 的js文件与js代码-->
+<script>
+    $(document).ready(function () {
+        $("#lightVersion").click(function (event) {
+            event.preventDefault();
+            $("#ibox-content").removeClass("ibox-content");
+            $("#vertical-timeline").removeClass("dark-timeline");
+            $("#vertical-timeline").addClass("light-timeline")
+        });
+        $("#darkVersion").click(function (event) {
+            event.preventDefault();
+            $("#ibox-content").addClass("ibox-content");
+            $("#vertical-timeline").removeClass("light-timeline");
+            $("#vertical-timeline").addClass("dark-timeline")
+        });
+        $("#leftVersion").click(function (event) {
+            event.preventDefault();
+            $("#vertical-timeline").toggleClass("center-orientation")
+        })
+    });
+</script>
+</body>
+</html>

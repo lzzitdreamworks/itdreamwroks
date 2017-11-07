@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="jsLoad/code/load.js" include="../top.html"></script>
+    <!--加css-->
+</head>
+<body>
+<div style="width:800px; margin:20px auto 0px auto;">
+
+    <form role="form" class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-5 control-label">建议开始时间</label>
+
+                    <div class="col-md-7">
+                        <input id="start" class="form-control layer-date" placeholder="20150106" value="20170501"
+                               readonly></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">建议结束时间</label>
+
+                    <div class="col-md-7">
+                        <input id="end" class="form-control layer-date" placeholder="20150106" value="20170501"
+                               readonly></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">工时（天）</label>
+
+                    <div class="col-md-7">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本" readonly value="8">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">人数</label>
+
+                    <div class="col-md-7">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本" readonly value="8">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">指派项目经理</label>
+
+                    <div class="col-md-7">
+                        <select class="form-control" name="">
+                            <option value="张三" readonly>张三</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">建议程序员名单</label>
+
+                    <div class="col-md-7">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本" readonly value="张三 李四">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>项目排期</h3>
+
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">开始时间</label>
+
+                    <div class="col-md-7">
+                        <input id="start1" class="form-control layer-date" placeholder="YYYY-MM-DD"
+                               onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">结束时间</label>
+
+                    <div class="col-md-7">
+                        <input id="end1" class="form-control layer-date" placeholder="YYYY-MM-DD"
+                               onClick="laydate({istime: true, format: 'YYYY-MM-DD'})"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-5 control-label">所有程序员名</label>
+
+                    <div class="col-md-7">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">排期文档路径</label>
+
+                    <div class="col-md-7">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label">排期文档CF地址链接</label>
+
+                    <div class="col-md-7">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+            <div class="hr-line-dashed"></div>
+                    <h3>新增里程碑</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr><th>类型</th>
+                         <th>负责人</th>
+                        <th>预计完成时间</th>
+                        <th>描述</th>
+                        <th nowrap="">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <select class="form-control" name="">
+                                <option value="张三" readonly>张三</option>
+                            </select>
+                        </td>
+                        <td>    <input type="text" name="" class="form-control" placeholder="请输入文本"></td>
+                        <td>
+                            <input id="start3" class="form-control layer-date" placeholder="YYYY-MM-DD"
+                                   onClick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+                        </td>
+                        <td>
+                            <textarea class="form-control" id="req_description" rows="1" placeholder="可以输入多行文本"
+                                      name="req_description"></textarea>
+                        </td>
+                        <td>
+                            <a href="javascript:;" ><i class="fa fa-plus"></i>新增</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="clearfix"></div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <div class="col-md-5 col-md-offset-6">
+                        <button class="btn btn-primary" type="submit">确定</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+    </form>
+</div>
+<script src="jsLoad/code/load.js" include="../js.html"></script>
+<!--加本页面 的js文件与js代码-->
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+</body>
+</html>

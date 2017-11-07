@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>YKSUI框架 - 需求管理</title>
+    <script src="jsLoad/code/load.js?20170116" include="../top.html"></script>
+    <!--加css-->
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>排行榜 </h5>
+
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label>主题</label>
+                            <input type="text" class="form-control"  placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>创建人</label>
+                            <select class="form-control">
+                                <option value="">请选择</option>
+                                <option value="apple">苹果</option>
+                                <option value="banana">香蕉</option>
+                                <option value="orange">桔子</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label>等级</label>
+                            <select class="form-control">
+                                <option value="">请选择</option>
+                                <option value="apple">苹果</option>
+                                <option value="banana">香蕉</option>
+                                <option value="orange">桔子</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>类型</label>
+                            <select class="form-control">
+                                <option value="">请选择</option>
+                                <option value="apple">苹果</option>
+                                <option value="banana">香蕉</option>
+                                <option value="orange">桔子</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>所属部门</label>
+                            <select class="form-control">
+                                <option value="">请选择</option>
+                                <option value="apple">苹果</option>
+                                <option value="banana">香蕉</option>
+                                <option value="orange">桔子</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>日期：</label>
+                            <input id="start" class="form-control layer-date" placeholder="YYYY-MM-DD hh:mm:ss" 
+                            onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                           <input id="end" class="form-control layer-date" placeholder="YYYY-MM-DD hh:mm:ss" 
+                           onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                        </div>
+
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-primary">查询</button>
+                      </div>
+                    </form>
+
+
+                  <div class="hr-line-dashed"></div>
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th width="20"><input id="checkAll" type="checkbox"></th>
+                            <th width="50">序号</th>
+                            <th>主题</th>
+                            <th>等级</th>
+                            <th>类型</th>
+                            <th>创建人</th>
+                            <th>所属部门</th>
+                            <th>创建日期</th>
+                            <th>状态</th>
+                            <th>价值RMB</th>
+                            <th>个人</th>
+                            <th>部门</th>
+                            <th>操作</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-center"><input name="subBox" type="checkbox"></td>
+                            <td>1</td>
+                            <td>有棵树测试</td>
+                            <td>高</td>
+                            <td>新建</td>
+                            <td>张三</td>
+                            <td>业务</td>
+                            <td>2016-0101</td>
+                            <td>新建</td>
+                            <td>100</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td><a href="javascript:;" class="Schedule">指定排期</a></td>
+                                                  <tr>
+                            <td class="text-center"><input name="subBox" type="checkbox"></td>
+                            <td>2</td>
+                            <td>有棵树测试</td>
+                            <td>高</td>
+                            <td>新建</td>
+                            <td>张三</td>
+                            <td>业务</td>
+                            <td>2016-0101</td>
+                            <td>新建</td>
+                            <td>200</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td><a href="#">指定排期</a></td>
+                          </tr>
+                        <tr>
+                            <td class="text-center"><input name="subBox" type="checkbox"></td>
+                            <td>3</td>
+                            <td>有棵树测试</td>
+                            <td>高</td>
+                            <td>新建</td>
+                            <td>张三</td>
+                            <td>业务</td>
+                            <td>2016-0101</td>
+                            <td>新建</td>
+                            <td>300</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td><a href="#">指定排期</a></td>
+                          </tr>
+                        <tr>
+                            <td class="text-center"><input name="subBox" type="checkbox"></td>
+                            <td>3</td>
+                            <td>有棵树测试</td>
+                            <td>高</td>
+                            <td>新建</td>
+                            <td>张三</td>
+                            <td>业务</td>
+                            <td>2016-0101</td>
+                            <td>新建</td>
+                            <td>400</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td><a href="#">指定排期</a></td>
+                          </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+          <div class="col-md-6 pull-left">
+                            <label>每页 <select class="input-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option></select> 条记录
+                                显示 1 到 10 项，共 57项</label>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="pagination pull-right">
+                                <li class="previous"><a href="your/nice/url">上一页</a></li>
+                                <li><a href="your/nice/url">1</a></li>
+                                <li class="active"><a href="your/nice/url">2</a></li>
+                                <li><a href="your/nice/url">3</a></li>
+                                <li><a href="your/nice/url">4</a></li>
+                                <li><a href="your/nice/url">5</a></li>
+                                <li class="next"><a href="your/nice/url">下一页</a></li>
+                            </ul>
+                        </div></div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<script src="jsLoad/code/load.js?20170116" include="../js.html"></script>
+<!--加本页面 的js文件与js代码-->
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+<script src="js/plugins/layer/layer.min.js?"></script>
+<script>
+        //弹出一个iframe层
+        $('.Schedule').on('click', function(){
+            layer.open({
+                type: 2,
+               title: '指定排期',
+                shadeClose: true, //点击遮罩关闭层
+                area : ['1000px' , '500px'],
+                content: 'aa.html'
+            });
+        });
+
+     </script>
+
+</body>
+</html>

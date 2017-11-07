@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>YKSUI框架 - 主页</title>
+    <script src="jsLoad/code/load.js" include="../top.html"></script>
+      <!--加css-->
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>
+                            <!--_ if(isset($this->resInfo['CTO'])){ -->
+                            CTO看板|
+                            <!--_ } -->
+                            <!--_ if(isset($this->resInfo['IT'])){ -->
+                            IT负责人|
+                            <!--_ } -->
+                            <!--_ if(isset($this->resInfo['yewu'])){ -->
+                            业务负责人|
+                            <!--_ } -->
+                            <!--_ if(isset($this->resInfo['person'])){ -->
+                            个人看板|
+                            <!--_ } -->
+                        </h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="ctobrand" style="min-width:300px;height:600px" _style="'display:' . isset($this->resInfo['CTO']) ? 'block' : 'none'"></div>
+                        <div id="itbrand" style="min-width:300px;height:600px" _style="'display:' . isset($this->resInfo['IT']) ? 'block' : 'none'"></div>
+                        <div id="jobbrand" style="min-width:300px;height:600px" _style="'display:' . isset($this->resInfo['yewu']) ? 'block' : 'none'"></div>
+                        <div id="personbrand" style="min-width:300px;height:600px" _style="'display:' . isset($this->resInfo['person']) ? 'block' : 'none'"></div>
+                    </div>
+                </div>
+
+            </div>
+          <!--  <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5><a href="speed.html" class="J_menuItem"> CTO看板</a></h5>
+
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+
+                        <div id="ctobrand" style="min-width:300px;height:600px"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5><a href="speed.html" class="J_menuItem">IT负责人</a></h5>
+
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="itbrand" style="min-width:300px;height:600px"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5><a href="speed.html" class="J_menuItem">业务负责人</a></h5>
+
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="jobbrand" style="min-width:300px;height:600px"></div>
+                    </div>
+                </div>
+
+            </div>
+-->
+        </div>
+    </div>
+    <!--_ if(isset($this->resInfo['CTO'])){ -->
+    <input type="hidden" name="ctopaiqi" _value="htmlspecialchars($this->resInfo['CTO']['paiqi'])"/>
+    <input type="hidden" name="ctokaifa" _value="htmlspecialchars($this->resInfo['CTO']['kaifa'])" />
+    <input type="hidden" name="ctojiexiang" _value="htmlspecialchars($this->resInfo['CTO']['jiexiang'])" />
+    <input type="hidden" name="ctoyanqi" _value="htmlspecialchars($this->resInfo['CTO']['yanqi'])" />
+    <!--_ } -->
+    <!--_ if(isset($this->resInfo['IT'])){ -->
+    <input type="hidden" name="itpaiqi" _value="htmlspecialchars($this->resInfo['IT']['paiqi'])" />
+    <input type="hidden" name="itkaifa" _value="htmlspecialchars($this->resInfo['IT']['kaifa'])" />
+    <input type="hidden" name="itjiexiang" _value="htmlspecialchars($this->resInfo['IT']['jiexiang'])" />
+    <input type="hidden" name="ityanqi" _value="htmlspecialchars($this->resInfo['IT']['yanqi'])" />
+    <!--_ } -->
+    <!--_ if(isset($this->resInfo['yewu'])){ -->
+    <input type="hidden" name="yewupaiqi" _value="htmlspecialchars($this->resInfo['yewu']['paiqi'])" />
+    <input type="hidden" name="yewukaifa" _value="htmlspecialchars($this->resInfo['yewu']['kaifa'])" />
+    <input type="hidden" name="yewujiexiang" _value="htmlspecialchars($this->resInfo['yewu']['jiexiang'])" />
+    <input type="hidden" name="yewuyanqi" _value="htmlspecialchars($this->resInfo['yewu']['yanqi'])" />
+    <!--_ } -->
+    <!--_ if(isset($this->resInfo['person'])){ -->
+    <input type="hidden" name="personpaiqi" _value="htmlspecialchars($this->resInfo['person']['paiqi'])" />
+    <input type="hidden" name="personkaifa" _value="htmlspecialchars($this->resInfo['person']['kaifa'])" />
+    <input type="hidden" name="personjiexiang" _value="htmlspecialchars($this->resInfo['person']['jiexiang'])" />
+    <input type="hidden" name="personyanqi" _value="htmlspecialchars($this->resInfo['person']['yanqi'])" />
+    <!--_ } -->
+    <script src="jsLoad/code/load.js" include="../js.html"></script>
+    <!--加本页面 的js文件与js代码-->
+   <!--图报js--->
+    <script type="text/javascript" src="js/plugins/chartJs/highcharts.js"></script>
+    <script type="text/javascript" src="js/plugins/chartJs/brand.js"></script>
+    <script>
+        function myBrowser(){
+            var explorer =navigator.userAgent ;
+            if (explorer.indexOf("Firefox") >= 0 || explorer.indexOf("Chrome") >= 0) {
+                //alert("亲爱的用户~ 我们建议您改用火狐或者谷歌浏览器，否则出现的bug我们不做受理，谢谢合作！");
+            }
+            else {
+                alert("亲爱的用户~ 我们建议您改用火狐或者谷歌浏览器，否则出现的bug我们不做受理，谢谢合作！");
+            }
+        }
+        myBrowser();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YKSUI框架 - 登录</title>
+    <link rel="stylesheet" type="text/css" href="css/greenlogin.css">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+</head>
+<body>
+<div class="logo-name" ><img src="img/logo1.png" width="30" style="margin-right: 20px;"><b __html="of::config('_of.view.title')" >深圳市有棵树科技股份有限公司</b></div>
+<div class="wrapper">
+        <div class="container">
+            <h1>Login</h1>
+
+            <form class="form" onsubmit="return loginObj.login(this);">
+                <input type="text" placeholder="用户名" class="login_input" name="user" >
+                <input type="password" placeholder="密码" class="login_input" name="pwd">
+
+                <div>
+                    <input type="text" class="login_input captcha-input" placeholder="验证码" name="captcha" >
+                    <img src="/include/of/index.php?c=of_base_com_com&a=captcha&width=130&height=44&bgColor=FFFFFF" id="captcha" title="点击刷新" style="cursor:pointer; margin-left: 10px;" onclick="this.src = (this.backupSrc || (this.backupSrc = this.src)) + '&t=' + new Date().getTime()"></div>
+                <button type="submit" class="login_button btn">登录</button>
+                <p __del class="text-muted text-center">
+                    <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
+                </p>
+
+
+            </form>
+            <div class="modify_password">
+                <a href="http://userinfo.youkeshu.com/Auser/forgot/password/" target="_blank">忘记密码</a>|
+                <a href="http://userinfo.youkeshu.com/Auser/change/password/" target="_blank">修改密码</a> |
+                <a href="http://userinfo.youkeshu.com" target="_blank">修改信息</a>
+            </div>
+        </div>
+    myBrowser();
+
+    </div>
+
+
+<script type="tpl" src="js/login.js"></script>
+<script>
+    function myBrowser(){
+        var explorer =navigator.userAgent ;
+        if (explorer.indexOf("Firefox") >= 0 || explorer.indexOf("Chrome") >= 0) {
+        }
+        else {
+             alert("亲爱的用户~ 我们建议您改用火狐或者谷歌浏览器，否则出现的bug我们不做受理，谢谢合作！");
+        }
+    }
+    myBrowser();
+</script>
+</body>
+</html>

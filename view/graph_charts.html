@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>YKSUI框架 - 404 页面</title>
+    <script src="jsLoad/code/load.js" include="../top.html"></script>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-12">
+ <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Highcharts</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <p>Highcharts 是一个用纯 JavaScript 编写的一个图表库， 能够很简单便捷的在 Web 网站或是 Web 应用程序添加有交互性的图表，并且免费提供给个人学习、个人网站和非
+                        商业用途使用。Highcharts 支持的图表类型有直线图、曲线图、区域图、柱状图、饼状图、散状点图、仪表图、气泡图、瀑布流图等多达 20 种图表，其中很多图表可以集成在同一个图形中形成混合图
+                        。<a href="http://cf.youkeshu.com/pages/viewpage.action?pageId=4490702" target="_blank">有关
+                        highcharts入门了解</a>
+                        </p>
+                        <p>Hcharts官网：<a href="https://www.hcharts.cn/" target="_blank">https://www.hcharts.cn/</a>
+                        </p>
+                        <h1>基础柱状图</h1>
+                        <div id="basecontainer" style="min-width:400px;height:400px"></div>
+                        <h1>曲线图</h1>
+                        <div id="qxcontainer" style="min-width:400px;height:400px"></div>
+                        <h1>饼图</h1>
+                        <div id="ccontainer" style="min-width:400px;height:400px"></div>
+                        <h1>多坐标图表</h1>
+                        <div id="container" style="min-width:400px;height:400px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="jsLoad/code/load.js" include="../js.html"></script>
+    <script type="text/javascript" src="js/plugins/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/plugins/highcharts/exporting.js"></script>
+    <!--加本页面 的js文件与js代码-->
+<script type="text/javascript">
+//基础柱状图
+    $(function () {
+    $('#basecontainer').highcharts({
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: '月平均降雨量'
+    },
+    subtitle: {
+        text: '数据来源: WorldClimate.com'
+    },
+    xAxis: {
+        categories: [
+            '一月',
+            '二月',
+            '三月',
+            '四月',
+            '五月',
+            '六月',
+            '七月',
+            '八月',
+            '九月',
+            '十月',
+            '十一月',
+            '十二月'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: '降雨量 (mm)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: '东京',
+        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    }, {
+        name: '纽约',
+        data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+    }, {
+        name: '伦敦',
+        data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+    }, {
+        name: '柏林',
+        data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
+    }]
+    });
+    });
+    //曲线图
+    $(function () {
+    $('#qxcontainer').highcharts({
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: '月平均气温'
+    },
+    subtitle: {
+        text: '数据来源: WorldClimate.com'
+    },
+    xAxis: {
+        categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+    },
+    yAxis: {
+        title: {
+            text: '气温 (°C)'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true          // 开启数据标签
+            },
+            enableMouseTracking: false // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+        }
+    },
+    series: [{
+        name: '东京',
+        data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+    }, {
+        name: '伦敦',
+        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+    }]
+    });
+    });
+    //饼图
+    $(function () {
+    $('#ccontainer').highcharts({
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false
+    },
+    title: {
+        text: '2014 某网站上各个浏览器的访问量占比'
+    },
+    tooltip: {
+        headerFormat: '{series.name}<br>',
+        pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: '浏览器访问量占比',
+        data: [
+            ['Firefox',   45.0],
+            ['IE',       26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true
+            },
+            ['Safari',    8.5],
+            ['Opera',     6.2],
+            ['其他',   0.7]
+        ]
+    }]
+    });
+    });
+
+
+
+    $(function () {
+    $('#container').highcharts({
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: '国内仓各平台每日发货数据'
+    },
+    subtitle: {
+        // text: '数据来源: WorldClimate.com'
+    },
+    xAxis: [{
+        categories: ['eBay', 'SMT', 'wish', 'amazon', 'shopee', 'lazada', 'Newegg'],
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value}%',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        title: {
+            text: '利润率',
+            style: {
+                color: Highcharts.getOptions().colors[2]
+            }
+        },
+        opposite: true
+    }, { // Secondary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: '订单数',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        labels: {
+            format: '{value} 万',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        }
+    }, { // Tertiary yAxis
+        gridLineWidth: 0,
+        title: {
+            text: '税前综合净利',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        labels: {
+            format: '{value} 万',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        opposite: true
+    }],
+    tooltip: {
+        shared: true
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        x: 80,
+        verticalAlign: 'top',
+        y: 55,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    series: [{
+        name: '发货单数',
+        type: 'spline',
+        yAxis: 1,
+        data: [65787, 63424, 63188, 23533, 85760, 67126, 47279],
+        tooltip: {
+            valueSuffix: ' 万'
+        }
+    }, {
+        name: '税前综合净利',
+        type: 'spline',
+        yAxis: 2,
+        data: [157252, 92216, 66257, 25896, 287631, 130804, 150233],
+        marker: {
+            enabled: false
+        },
+        dashStyle: 'shortdot',
+        tooltip: {
+            valueSuffix: ' 万'
+        }
+    }, {
+        name: '发货收入',
+        type: 'spline',
+        yAxis: 2,
+        data: [3095329, 3179233, 2840083, 1272159, 3861061, 3245648, 2043625],
+        tooltip: {
+            valueSuffix: ' 万'
+        }
+    }, {
+        name: '税前综合利润率',
+        type: 'spline',
+        data:  [5.0803, 2.9006, 2.3329, 2.0356, 7.4495, 4.0302, 7.3513],
+        tooltip: {
+            valueSuffix: ' %'
+        }
+    }]
+    });
+    });
+</script>
+</body>
+</html>

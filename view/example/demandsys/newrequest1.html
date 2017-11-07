@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>YKSUI框架 - 新建需求</title>
+    <script src="jsLoad/code/load.js" include="../top.html"></script>
+    <!--加css-->
+    <!--Markdown文本编辑器--->
+    <link rel="stylesheet" type="text/css" href="css/plugins/markdown/bootstrap-markdown.min.css" />
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>新建需求 </h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form method="get" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label required">主题</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label required">需求类型</label>
+                            <div class="col-md-2">
+                                <select class="form-control m-b" name="account">
+                                    <option>选项 1</option>
+                                    <option>选项 2</option>
+                                    <option>选项 3</option>
+                                    <option>选项 4</option>
+                                </select>
+
+                            </div>
+                            <label class="col-md-2 control-label">需求等级</label>
+                            <div class="col-md-2">
+                                <select class="form-control m-b" name="account">
+                                    <option>选项 1</option>
+                                    <option>选项 2</option>
+                                    <option>选项 3</option>
+                                    <option>选项 4</option>
+                                </select>
+
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">系统名称</label>
+                            <div class="col-md-4">
+
+                                    <select class="chosen-select form-control" tabindex="-1" name="orderState"
+                                            data-name-group="common">
+                                    <option selected>选项 1</option>
+                                    <option>选项 2</option>
+                                    <option>选项 3</option>
+                                    <option>选项 4</option>
+                                </select><span class="help-block m-b-none">注：需求类型为“bug”或者“改进”时，必须选择系统名称</span>
+                            </div>
+                            <div class="col-md-2 text-left">
+                                <a data-toggle="modal" class="btn btn-primary" href="newrequest.html#modal-form">新增</a>
+                            </div>
+                        </div>
+                       
+                         <div class="form-group">
+                            <label class="col-md-3 control-label">需求描述</label>
+                            <div class="col-md-6" >
+                                <textarea class="form-control " rows="3" placeholder="可以输入多行文本"  data-provide="markdown"></textarea>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                       
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">上传BRD文件</label>
+                            <div class="col-md-6">
+                                <input type="file" class="form-control" value="上传文件">
+                            </div>
+                        </div>
+                       
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label required">价值评估</label>
+                            <div class="col-md-2">
+                                <div class="input-group m-b">
+                                    <input type="text" placeholder="用户名" class="form-control">
+                                    <span class="input-group-addon">RMB</span>
+                                </div>
+                            </div>
+                            <label class="col-md-2 control-label">上传价值评估文件</label>
+                            <div class="col-md-2">
+                                <input type="file" class="form-control" value="上传文件">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label class="col-md-3 control-label required">提报审核人</label>
+                            <div class="col-md-6">
+
+
+
+                                    <select data-placeholder="选择" class="chosen-select form-control" multiple tabindex="4">
+                                        <option value="">请选择</option>
+                                        <option value="110000" hassubinfo="true">张三</option>
+                                        <option value="120000" hassubinfo="true">李四</option>
+                                        <option value="130000" hassubinfo="true">张霞</option>
+                                        <option value="140000" hassubinfo="true">刘霞</option>
+                                        <option value="150000" hassubinfo="true">刘杨</option>
+                                        <option value="210000" hassubinfo="true">王二</option>
+
+                                    </select>
+                            </div>
+                            </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label required">抄送给</label>
+                            <div class="col-md-6">
+                                        <select data-placeholder="选择" class="chosen-select form-control"   multiple  tabindex="4">
+                                        <option value="">请选择</option>
+                                            <option value="110000" hassubinfo="true">张三</option>
+                                            <option value="120000" hassubinfo="true">李四</option>
+                                            <option value="130000" hassubinfo="true">张霞</option>
+                                            <option value="140000" hassubinfo="true">刘霞</option>
+                                            <option value="150000" hassubinfo="true">刘杨</option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-3">
+                                <button class="btn btn-primary" type="submit">保存草稿</button>
+                                <button class="btn btn-warning" type="submit">提交审核</button>
+                                <button class="btn btn-danger" type="reset">取消</button>
+                            </div>
+                        </div>
+
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="modal-form" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+
+                        <form role="form" class="form-inline">
+                            <div class="form-group">
+                                <label>系统名称：</label>
+                                <input type="email" placeholder="请输入系统名称" class="form-control">
+                                                           </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary " type="submit">新增
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     <script src="jsLoad/code/load.js" include="../js.html"></script>
+    <!--加本页面 的js文件与js代码-->
+<script type="text/javascript" src="js/plugins/markdown/markdown.js"></script>
+<script type="text/javascript" src="js/plugins/markdown/to-markdown.js"></script>
+<script type="text/javascript" src="js/plugins/markdown/bootstrap-markdown.js"></script>
+<script type="text/javascript" src="js/plugins/markdown/bootstrap-markdown.zh.js"></script>
+<script>
+    $(function () {
+        $('select.chosen-select').chosen({
+            no_results_text: '没有找到',    // 当检索时没有找到匹配项时显示的提示文本
+            disable_search_threshold: 2, // 10 个以下的选择项则不显示检索框
+            search_contains: true         // 从任意位置开始检索
+        });
+    });
+
+</script>
+</body>
+</html>

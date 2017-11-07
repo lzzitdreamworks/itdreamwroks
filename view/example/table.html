@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>YKSUI框架 - 需求管理</title>
+    <script src="../jsLoad/code/load.js?20170503" include="../top.html"></script>
+    <!--加css-->
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>采购单</h5>
+                </div>
+                <div class="ibox-content">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                        <tr><th width="20"><i class="fa fa-plus"></i></th>
+                            <th>供应商</th>
+                            <th>联系人</th>
+                            <th>付款方式</th>
+                            <th>付款账号</th>
+                            <th>仓库</th>
+                            <th>运费</th>
+                            <th>样品下单</th>
+                            <th>备注</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a class="btn btn-info btn-sm" role="button" data-toggle="collapse" href="#tabledetail"
+                                   aria-expanded="false" aria-controls="tabledetail">展开</a></td>
+                            <td class="text-center">有棵树</td>
+                            <td>张三</td>
+
+                            <td>ZC683902</td>
+                            <td>55ace101ea56830806eb11a2</td>
+                            <td>dsaf </td>
+                            <td>2017-02-20,16:27:50</td>
+                            <td>approved</td>
+                            <td>True</td>
+                        </tr>
+                        <tr class="collapse" id="tabledetail">
+                            <td colspan="9">
+                                <form>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>SKU</th>
+                                            <th>中文名称</th>
+                                            <th>单位</th>
+                                            <th>储位</th>
+                                            <th>计税方式</th>
+                                            <th>单价</th>
+                                            <th>数量</th>
+                                            <th>税率</th>
+                                            <th>金额</th>
+                                            <th>交货日期</th>
+                                            <th>系统成本价</th>
+                                            <th>主仓库（国内）</th>
+                                            <th>状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control w120"  placeholder="" name="sku"></td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>8</td>
+                                            <td><select name="review_status" id="review_status" class="form-control">
+                                                <option value="">-请选择-</option>
+                                                <option value="1">不计税</option>
+                                                <option value="2">计税</option>
+                                            </select></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td>15%</td>
+                                            <td>15%</td>
+                                            <td>dsf </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn btn-info btn-sm" role="button" data-toggle="collapse" href="#tabledetail1"
+                                   aria-expanded="false" aria-controls="tabledetail1">展开</a></td>
+                            <td class="text-center"><input name="subBox" type="checkbox"></td>
+                            <td>1</td>
+                            <td>ZC683902</td>
+                            <td>55ace101ea56830806eb11a2</td>
+                            <td>sdfa </td>
+                            <td>2017-02-20,16:27:50</td>
+                            <td>approved</td>
+                            <td>True</td>
+                        </tr>
+                        <tr class="collapse" id="tabledetail1">
+                            <td colspan="9">
+                                <form>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>SKU</th>
+                                            <th>中文名称</th>
+                                            <th>单位</th>
+                                            <th>储位</th>
+                                            <th>计税方式</th>
+                                            <th>单价</th>
+                                            <th>数量</th>
+                                            <th>税率</th>
+                                            <th>金额</th>
+                                            <th>交货日期</th>
+                                            <th>系统成本价</th>
+                                            <th>主仓库（国内）</th>
+                                            <th>状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control w120"  placeholder="" name="sku"></td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>8</td>
+                                            <td><select name="review_status" id="review_status" class="form-control">
+                                                <option value="">-请选择-</option>
+                                                <option value="1">不计税</option>
+                                                <option value="2">计税</option>
+                                            </select></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td><input type="text" class="form-control w80"  placeholder="" name=""></td>
+                                            <td>15%</td>
+                                            <td>15%</td>
+                                            <td>dsf </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="row" >
+                        <div class="col-md-6 pull-left">
+                            <label>每页 <select class="input-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option></select>条记录
+                                显示 1 到 10 项，共 57项</label>
+                        </div>
+                        <div class="col-md-6" >
+                            <ul class="pagination pull-right">
+                                <li class="previous"><a href="../your/nice/url">上一页</a></li>
+                                <li><a href="../your/nice/url">1</a></li>
+                                <li class="active"><a href="../your/nice/url">2</a></li>
+                                <li><a href="../your/nice/url">3</a></li>
+                                <li><a href="../your/nice/url">4</a></li>
+                                <li><a href="../your/nice/url">5</a></li>
+                                <li class="next"><a href="../your/nice/url">下一页</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../jsLoad/code/load.js?20170116" include="../js.html"></script>
+<script src="../js/self.js"></script>
+<script type="tpl" src="../js/wish/publishedSku.js"></script>
+<script>
+    $(function() {
+        $('select.chosen-select').chosen({
+            no_results_text : '没有找到', // 当检索时没有找到匹配项时显示的提示文本
+            disable_search_threshold : 2, // 10 个以下的选择项则不显示检索框
+            search_contains : true
+            // 从任意位置开始检索
+        });
+    });
+</script>
+<!--加本页面 的js文件与js代码-->
+</body>
+</html>

@@ -1,0 +1,55 @@
+.top20{margin-top: 20px;}
+.required {
+    position: relative;
+}
+.required:after {
+    position: absolute;
+    top: 5px;
+    display: inline-block;
+    font-size: 17px;
+    color: #ea644a;
+    content: '*';
+}
+.text-important {
+    color: #bd7b46;
+}
+.text-important:hover {
+    color: #996337;
+}
+.text-special {
+    color: #8666b8;
+}
+.text-special:hover {
+    color: #6c4aa1;
+}
+.text-link {
+    color: #353535;
+}
+.text-link:hover,
+.text-link:active {
+    color: #145ccd;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-nowrap,
+.nobr {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.logo-element img{width: 30px;padding-right:5px; }
+.form-inline button{margin-top: 5px;}
+.request label{ margin-left: 20px;}
+.request select{ min-width:120px;}
+.request .form-group{margin-bottom: 10px; }

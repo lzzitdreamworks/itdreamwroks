@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+        <script src="jsLoad/code/load.js?20170116" include="../top.html"></script>
+        <!--加css-->
+</head>
+<body>
+<div style="width:800px; margin-top: 20px;">
+                <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">建议开始时间</label>
+                            <div class="col-md-4">
+                                <input id="start" class="form-control layer-date" placeholder="YYYY-MM-DD hh:mm:ss" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">建议结束时间</label>
+                            <div class="col-md-4">
+                                <input id="end" class="form-control layer-date" placeholder="YYYY-MM-DD hh:mm:ss" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">  </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">工时（天）</label>
+                            <div class="col-md-4">
+                                <input type="text" name="" class="form-control" placeholder="请输入文本">
+                                <span class="help-block m-b-none"></span></div>
+                        </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">人数</label>
+                        <div class="col-md-4">
+                            <input type="text" name="" class="form-control" placeholder="请输入文本">
+                           </div>
+                    </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">指派项目经理</label>
+                            <div class="col-md-4">
+                                <select class="form-control" name=""></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">建议程序员名单</label>
+                            <div class="col-md-4">
+                                <select data-placeholder="选择" class="chosen-select form-control"   multiple  tabindex="4">
+                                    <option value="">请选择</option>
+                                    <option value="110000" hassubinfo="true">张三</option>
+                                    <option value="120000" hassubinfo="true">李四</option>
+                                    <option value="130000" hassubinfo="true">张霞</option>
+                                    <option value="140000" hassubinfo="true">刘霞</option>
+                                    <option value="150000" hassubinfo="true">刘杨</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    <div class="form-group">
+                        <div class="col-md-4 col-md-offset-4">
+                            <button class="btn btn-primary" type="submit">确定</button>
+                          </div>
+                    </div>
+
+
+                </form>
+</div>
+<script src="jsLoad/code/load.js?20170116" include="../js.html"></script>
+<!--加本页面 的js文件与js代码-->
+<script src="js/plugins/layer/laydate/laydate.js"></script>
+<script>
+    $(function () {
+        $('select.chosen-select').chosen({
+            no_results_text: '没有找到',    // 当检索时没有找到匹配项时显示的提示文本
+            disable_search_threshold: 2, // 10 个以下的选择项则不显示检索框
+            search_contains: true         // 从任意位置开始检索
+        });
+    });
+</script>
+</body>
+</html>

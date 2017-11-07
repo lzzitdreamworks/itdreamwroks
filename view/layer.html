@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>YKSUI框架 - 需求管理</title>
+    <script src="jsLoad/code/load.js?20170116" include="../top.html"></script>
+    <!--加css-->
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>layer简介</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <p>layer是一款口碑极佳的web弹层组件，她具备全方位的解决方案，致力于服务各个水平段的开发人员，您的页面会轻松地拥有丰富而友好的操作体验。</p>
+
+                    <p>在与同类组件的比较中，layer总是能轻易获胜。她尽可能地在以更少的代码展现更强健的功能，且格外注重性能的提升、易用和实用性，正因如此，越来越多的开发者将媚眼投上了layer（已被1739623人次关注）。layer兼容了包括IE6在内的所有主流浏览器。 她数量可观的接口，使得您可以自定义太多您需要的风格，每一种弹层模式各具特色，广受欢迎。当然，这种“王婆卖瓜”的陈述听起来总是有点难受，因此你需要进一步了解她是否真的如你所愿。</p>
+
+                    <p>layer遵循LGPL协议，将永久性提供无偿服务。历经三年，截至到2015年5月23日，已运用在10万余家web平台，其中包括中国联通、蚂蚁短租、慕课网、phpyun等等知名网站，如果您有大型项目也在使用layer，您可以联系作者，以便在此展现案例，也为您的品牌推广尽一些绵薄之力。</p>
+                    <hr>
+                    <p>layer官网：<a href="http://layer.layui.com/" target="_blank">http://layer.layui.com/</a>
+                        <br>layer官网文档：<a href="http://layer.layui.com/api.html" target="_blank">http://layer.layui.com/api.html</a>
+                    </p>
+                    <strong>【注意事项】</strong>
+                    <pre>
+                    一、使用时，请把文件夹layer整个放置在您站点的任何一个目录，只需引入layer.js即可，除jQuery外，其它文件无需再引入。
+                    二、如果您的js引入是通过合并处理或者您不想采用layer自动获取的绝对路径，您可以通过layer.config()来配置（详见官网API页）
+                    三、jquery需1.8+
+                    四、更多使用说明与演示，请参见layer官网。
+                    五、使用时请务必保留来源，请勿用于违反我国法律的web平台。
+                    六、layer遵循MIT开源协议，将永久性提供无偿服务。
+                        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>案列</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+
+                    <button id="test1">小小提示层</button>
+                    <button id="test2">页面层</button>
+                    <button id="parentIframe">iframe</button>
+                    <button id="test4">loading</button>
+                    <button id="test5">tips层</button>
+
+                    <a href="layer1.html" class="J_menuItem"> 更多案列请点击</a>
+                              </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+<script src="jsLoad/code/load.js?20170116" include="../js.html"></script>
+<!--加本页面 的js文件与js代码-->
+<script src="js/plugins/layer/layer.min.js?20170118"></script>
+
+
+<script>
+
+    $('#test1').on('click', function(){
+        layer.msg('Hello layer');
+    });
+
+
+    //弹出一个页面层
+    $('#test2').on('click', function(){
+        layer.open({
+            type: 1,
+            area: ['600px', '360px'],
+            shadeClose: true, //点击遮罩关闭
+            content: '\<\div style="padding:20px;">自定义内容\<\/div>'
+        });
+    });
+
+
+    //弹出一个iframe层
+    $('#parentIframe').on('click', function(){
+        layer.open({
+            type: 2,
+            title: 'iframe父子操作',
+            maxmin: true,
+            shadeClose: true, //点击遮罩关闭层
+            area : ['800px' , '520px'],
+            content: 'http://www.163.com'
+        });
+    });
+
+
+    //弹出一个loading层
+    $('#test4').on('click', function(){
+        var ii = layer.load();
+        //此处用setTimeout演示ajax的回调
+        setTimeout(function(){
+            layer.close(ii);
+        }, 1000);
+    });
+
+    //弹出一个tips层
+    $('#test5').on('click', function(){
+        layer.tips('Hello tips!', '#test5');
+    });
+
+
+</script>
+
+</body>
+</html>
