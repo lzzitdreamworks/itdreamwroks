@@ -11,7 +11,7 @@ if (PHP_SAPI === 'cli') {
     //默认调度
     $_GET += array('c' => 'ctrl_main', 'a' => 'cliTip');
 //已登录
-} else if (true) {
+} else if (false) {
 // } else if (of_base_sso_tool::check()) {
     //默认调度
     $_GET += array('c' => 'ctrl_main', 'a' => 'index');
