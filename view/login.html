@@ -5,7 +5,7 @@
     <title>登录</title>
     <script src="jsLoad/code/load.js" include="../top.html"></script>
     <!--加css-->
-
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 </head>
 
 <body class="gray-bg">
@@ -14,77 +14,42 @@
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>登录</h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="form_basic.html#">选项1</a>
-                            </li>
-                            <li><a href="form_basic.html#">选项2</a>
-                            </li>
-                        </ul>
-                        <a class="close-link">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </div>
+                    <h3>登 录</h3>
                 </div>
                 <div class="ibox-content">
-                    <form class="form-horizontal m-t" id="signupForm">
+                    <form class="form-horizontal m-t" id="signupForm" >
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">姓氏：</label>
-                            <div class="col-sm-8">
-                                <input id="firstname" name="firstname" class="form-control" type="text">
-                                <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 这里写点提示的内容</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">名字：</label>
-                            <div class="col-sm-8">
-                                <input id="lastname" name="lastname" class="form-control" type="text" aria-required="true" aria-invalid="false" class="valid">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">用户名：</label>
-                            <div class="col-sm-8">
-                                <input id="username" name="username" class="form-control" type="text" aria-required="true" aria-invalid="true" class="error">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">密码：</label>
-                            <div class="col-sm-8">
-                                <input id="password" name="password" class="form-control" type="password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">确认密码：</label>
-                            <div class="col-sm-8">
-                                <input id="confirm_password" name="confirm_password" class="form-control" type="password">
-                                <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 请再次输入您的密码</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">E-mail：</label>
-                            <div class="col-sm-8">
-                                <input id="email" name="email" class="form-control" type="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-8 col-sm-offset-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" class="checkbox" id="agree" name="agree"> 我已经认真阅读并同意《H+使用协议》
-                                    </label>
+                            <div class="col-sm-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon "><i class="glyphicon glyphicon-envelope"></i></span>
+                                    <input type="email" id="user_email" name="user_email" placeholder="邮箱" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-8 col-sm-offset-3">
-                                <button class="btn btn-primary" type="submit">提交</button>
+                            <div class="col-sm-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input type="password" id="user_password" name="user_password" placeholder="密码" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6" style="float: left">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="i-checks"><i> 记住账号 </i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="float: left">
+                                <a type="button" class="space" style="float: right"
+                                   href="http://www.itdreamworks.com/" target="_blank">忘记账号或密码</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6 col-sm-offset-2 text-center">
+                                <button type="button" class="btn btn-w-m btn-primary">登录</button>
                             </div>
                         </div>
                     </form>
@@ -98,6 +63,12 @@
 <script src="js/plugins/validate/jquery.validate.min.js"></script>
 <script src="js/plugins/validate/messages_zh.min.js"></script>
 <script src="js/demo/form-validate-demo.min.js"></script>
+
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+</script>
+
 </body>
 
 </html>

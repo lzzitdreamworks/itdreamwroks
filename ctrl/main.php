@@ -13,8 +13,8 @@ class ctrl_main extends L {
      * 作者 : sunrise.lzz
      */
     public function door() {
-//        $this->display('/login.html');
-        $this->display('/registered.html');
+        $this->display('/login.html');
+//        $this->display('/registered.html');
     }
 
     /**
