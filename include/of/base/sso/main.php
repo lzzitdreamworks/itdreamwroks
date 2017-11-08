@@ -15,7 +15,7 @@ class of_base_sso_main extends of_base_sso_api {
                 //管理平台未登录
                 !isset($_SESSION['_of']['of_base_sso']['mgmt']) :
                 //单点用户未登录
-                empty($_SESSION['_of']['of_base_sso']['users'][$_GET['space']])
+                empty($_SESSION['_of']['of_base_sso']['account'][$_GET['space']])
         ) {
             self::loginMain();
         //已登录回跳

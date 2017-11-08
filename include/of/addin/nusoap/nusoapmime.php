@@ -46,7 +46,7 @@ require_once('Mail/mimePart.php');
 * nusoap_client_mime client supporting MIME attachments defined at
 * http://www.w3.org/TR/SOAP-attachments.  It depends on the PEAR Mail_MIME library.
 *
-* @author   Scott Nichol <snichol@users.sourceforge.net>
+* @author   Scott Nichol <snichol@account.sourceforge.net>
 * @author	Thanks to Guillaume and Henning Reich for posting great attachment code to the mail list
 * @version  $Id: nusoapmime.php,v 1.13 2010/04/26 20:15:08 snichol Exp $
 * @access   public
@@ -276,7 +276,7 @@ if (!extension_loaded('soap')) {
 * nusoap_server_mime server supporting MIME attachments defined at
 * http://www.w3.org/TR/SOAP-attachments.  It depends on the PEAR Mail_MIME library.
 *
-* @author   Scott Nichol <snichol@users.sourceforge.net>
+* @author   Scott Nichol <snichol@account.sourceforge.net>
 * @author	Thanks to Guillaume and Henning Reich for posting great attachment code to the mail list
 * @version  $Id: nusoapmime.php,v 1.13 2010/04/26 20:15:08 snichol Exp $
 * @access   public

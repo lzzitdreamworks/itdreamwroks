@@ -15,7 +15,8 @@ class mainCtrl extends \L {
      * 作者 : sunrise.lzz
      */
     public function door() {
-        $this->display('/login.html');
+        $this->display('/account/login.html');
+//        $this->display('/login.html');
 //        $this->display('/registered.html');
     }
 
@@ -24,6 +25,8 @@ class mainCtrl extends \L {
      * 作者 : sunrise.lzz
      */
     public function login() {
+        echo "<pre>"; print_r($_POST); exit();
+
         if (isset($_POST['user']) && isset($_POST['pwd']) && isset($_POST['captcha'])) {
             //验证通过
             if (of_base_com_com::captcha($_POST['captcha'])) {

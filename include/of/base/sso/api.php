@@ -14,7 +14,7 @@
  *          504 : 票据失效
  *      }
  *      单点登录session存储结构($_SESSION['_of']['of_base_sso']) : {
- *          "users" : 已登录的用户 {
+ *          "account" : 已登录的用户 {
  *              登录类型 : {
  *                  "user"  : 已登陆的用户ID
  *                  "name"  : 已登录的用户名
@@ -287,7 +287,7 @@ class of_base_sso_api {
      * 作者 : Edgar.lee
      */
     public static function check($isReturn = false) {
-        $index = &$_SESSION['_of']['of_base_sso']['users'][$_GET['space']];
+        $index = &$_SESSION['_of']['of_base_sso']['account'][$_GET['space']];
         $realm = &$_SESSION['_of']['of_base_sso']['realm'][$_GET['name']];
         $json = array(
             'state'  => 200,
@@ -301,7 +301,7 @@ class of_base_sso_api {
                     if ($temp['time']) {
                         //登入回调
                         self::pushState($_GET['space'], $temp);
-                        $index = &$_SESSION['_of']['of_base_sso']['users'][$_GET['space']];
+                        $index = &$_SESSION['_of']['of_base_sso']['account'][$_GET['space']];
                     } else {
                         $json['state'] = 404;
                         $json['msg'] = '需先修改密码';
@@ -375,7 +375,7 @@ class of_base_sso_api {
         $realm = &$index['realm'][$_GET['name']];
 
         //移除登录状态
-        unset($index['users'][$_GET['space']]);
+        unset($index['account'][$_GET['space']]);
         //全部退出
         self::pushState($_GET['space']);
 
@@ -451,8 +451,8 @@ class of_base_sso_api {
                     }
 
                     empty($_GET['space']) || $where[] = 
-                        isset($index['users'][$_GET['space']]['name']) &&
-                        $index['users'][$_GET['space']]['name'] === $_GET['user'] ? 'TRUE' : 'FALSE';
+                        isset($index['account'][$_GET['space']]['name']) &&
+                        $index['account'][$_GET['space']]['name'] === $_GET['user'] ? 'TRUE' : 'FALSE';
                     empty($_GET['oPwd']) || $where[] = "`pwd` = MD5('{$_GET['oPwd']}')";
                     empty($_GET['oAnswer']) || $where[] = "`find` = RPAD(CONCAT(
                         SUBSTR(`find`, 1, LENGTH(SUBSTR(`find`, 1, POSITION('_' IN `find`))) + SUBSTR(`find`, 1, POSITION('_' IN `find`) - 1)), 
@@ -563,7 +563,7 @@ class of_base_sso_api {
      */
     protected static function pushState(&$space, &$type = false) {
         $index = &$_SESSION['_of']['of_base_sso'];
-        is_array($type) && $index['users'][$space] = $type;
+        is_array($type) && $index['account'][$space] = $type;
 
         if (isset($index['realm'])) {
             foreach ($index['realm'] as $k => &$v) {

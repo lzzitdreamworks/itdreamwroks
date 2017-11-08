@@ -8,7 +8,7 @@
 * imperfect, no validation... yet, but quite functional.
 *
 * @author   Dietrich Ayala <dietrich@ganx4.com>
-* @author   Scott Nichol <snichol@users.sourceforge.net>
+* @author   Scott Nichol <snichol@account.sourceforge.net>
 * @version  $Id: class.xmlschema.php,v 1.53 2010/04/26 20:15:08 snichol Exp $
 * @access   public
 */

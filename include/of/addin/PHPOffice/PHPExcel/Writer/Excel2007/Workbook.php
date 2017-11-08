@@ -195,7 +195,7 @@ class PHPExcel_Writer_Excel2007_Workbook extends PHPExcel_Writer_Excel2007_Write
 		$objWriter->startElement('calcPr');
 
 		//	Set the calcid to a higher value than Excel itself will use, otherwise Excel will always recalc
-        //  If MS Excel does do a recalc, then users opening a file in MS Excel will be prompted to save on exit
+        //  If MS Excel does do a recalc, then account opening a file in MS Excel will be prompted to save on exit
         //     because the file has changed
 		$objWriter->writeAttribute('calcId', 			'999999');
 		$objWriter->writeAttribute('calcMode', 			'auto');
