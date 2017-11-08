@@ -1,5 +1,7 @@
 <?php
-class ctrl_main extends L {
+
+namespace ctrl;
+class mainCtrl extends \L {
     /**
      * 描述 : 显示主界面
      * 作者 : sunrise.lzz
