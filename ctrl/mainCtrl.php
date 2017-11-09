@@ -15,7 +15,11 @@ class mainCtrl extends \L {
      * 作者 : sunrise.lzz
      */
     public function door() {
-        $this->display('/account/login.html');
+        $this->display('/account/signin.html');
+        $this->display('/account/signup.html');
+//        $this->display('/account/Sign in - Venew.html');
+//        $this->display('/account/signin1.html');
+//        $this->display('/account/login.html');
 //        $this->display('/login.html');
 //        $this->display('/registered.html');
     }
