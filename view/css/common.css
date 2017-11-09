@@ -1,0 +1,91 @@
+.login-page {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.login-page .logo-name-mb {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: #333;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login-page .form {
+    padding: 20px 0;
+}
+
+.login-page .container {
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    opacity: 0.8;
+    background: #0d3d88;
+    text-align: center;
+}
+
+.login-page .container h1 {
+    font-size: 40px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+}
+
+.login-page input {
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+}
+
+.login-page input:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-page input:focus {
+    background-color: white;
+    color: #000;
+}
+
+.login-page a {
+    text-decoration: none;
+}
+
+#home {
+    margin-top: 15px;
+    margin-left: 0;
+}
+
+#menu {
+    margin-top: 15px;
+    margin-left: 10px
+}
+
+#nav-menu {
+    z-index: 100
+}
+
+.btn-mid {
+    width: 48%;
+}
+
+.btn-long {
+    width: 100%;
+}
+
+.red {
+    color: red;
+}
+
+.text-larger {
+    font-size: 150%;
+}
+.operation{
+    margin-top: -5px;
+}
