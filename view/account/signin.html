@@ -17,7 +17,8 @@
     <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
     <!--加css-->
     <link _href="ROOT_URL . '/view/css/main.css'" rel="stylesheet">
-    <!--<link _href="ROOT_URL . '/view/css/plugins/iCheck/custom.css'" rel="stylesheet">-->
+    <link _href="ROOT_URL . '/view/css/plugins/iCheck/custom.css'" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" _href="ROOT_URL . '/view/css/style2.css'">
 
 </head>
 
@@ -33,15 +34,29 @@
                         <input name="_csrf" type="hidden"
                                value="WIDNoLrWyU7n4EXvXOMU0HRzu+gUd93k3albQ=">
                         <input
-                            class="form-control" name="email" id="email" placeholder="邮箱"
+                            class="form-control" name="email" id="email" placeholder="邮&nbsp;箱"
                             autofocus="" required="" type="email">
                         <input class="form-control" name="password" id="password"
-                               placeholder="密码" required="" type="password">
+                               placeholder="密&nbsp;码" required="" type="password">
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-8">
                                 <button class="btn btn-save pull-right" type="submit">登&nbsp;录</button>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <button class="btn btn-sm btn-link pull-right m-t-n-xs" type="submit">
+                                    <strong>忘记账号或密码</strong>
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>
+                                    <input type="checkbox" class="i-checks" id="remember_me" name="remember_me"><i> 记住账号 </i>
+                                </label>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
                 <div class="col-md-5 purple-block"><h3>It dream works.</h3>
