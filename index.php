@@ -12,27 +12,24 @@ if (PHP_SAPI === 'cli') {
     $_GET += array('c' => 'mainCtrl', 'a' => 'cliTip');
 //已登录
 } else if (false) {
-// } else if (of_base_sso_tool::check()) {
     //默认调度
     $_GET += array('c' => 'mainCtrl', 'a' => 'index');
     //无权访问
-//    of_base_sso_tool::role("{$_GET['c']}::{$_GET['a']}") || $_GET = array('c' => 'mainCtrl', 'a' => 'unRole');
 //未登录
 } else {
-    //登录中
-    if (
-        isset($_GET['c']) && $_GET['c'] === 'mainCtrl' &&
-        isset($_GET['a']) && $_GET['a'] === 'login'
-    ) {
-        //启动定时器
-        of_base_com_timer::timer();
+    if (isset($_GET['c']) && isset($_GET['a'])) {
+        $_GET = array('c' => $_GET['c'], 'a' => $_GET['a']);
     } else {
         //展示登录界面
         $_GET = array('c' => 'mainCtrl', 'a' => 'door');
     }
+
 }
 
+//echo "<pre>"; print_r($_GET); exit();
+
 //调度
-$result = of::dispatch('ctrl\\' . strtr($_GET['c'], '_', '\\'), $_GET['a'], PHP_SAPI === 'cli' ? null : true);
+$result = of::dispatch('ctrl\\' . strtr($_GET['c'], '_', '\\'),
+    $_GET['a'], PHP_SAPI === 'cli' ? null : true);
 if (is_array($result)) echo of_base_com_data::json($result);
 

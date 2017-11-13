@@ -31,17 +31,16 @@
                 <div class="col-md-1"><p>&nbsp;</p></div>
                 <div class="col-md-5 white-block">
                     <h3>注&nbsp;册</h3>
-                    <form class="form-horizontal" id="signup-form" method="POST">
-                        <input name="_csrf" type="hidden"
-                               value="oa5i24LbarLrAj3ou5YBv6RYCSMHQ+GojxbmY=">
+                    <form class="form-horizontal" id="signup-form" method="POST"
+                          onsubmit="return usersObject.registerCheck(this);">
                         <input
                                class="form-control" name="email" id="email" placeholder="邮箱"
                                autofocus="" required="" type="email">
-                        <input class="form-control" name="password" id="password"
-                               placeholder="密码" required="" type="password">
+                        <input class="form-control" name="password" id="password" placeholder="密码"
+                               minlength="8" maxlength="20" required="" type="password">
                         <input
-                            class="form-control" name="confirmPassword" id="confirmPassword"
-                            placeholder="确认密码" required="" type="password">
+                               class="form-control" name="confirmPassword" id="confirmPassword" placeholder="确认密码"
+                               minlength="8" maxlength="20" required="" type="password">
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-8">
                                 <button class="btn btn-save pull-right" type="submit">注&nbsp;册</button>
@@ -54,7 +53,8 @@
                     <p>With Chatform, you can design forms and surveys that anyone can fill using their favourite
                         messaging apps, SMS, or web chat.
                     </p>
-                    <h4>已有账号?<a class="btn btn-q-white-trans" href="http://chatform.ai/login">
+                    <h4>已有账号? <a class="btn btn-q-white-trans"
+                        _href="ROOT_URL.'/index.php?c=account_usersCtrl&a=login'">
                             <strong>登&nbsp;录</strong>
                         </a>
                     </h4>
@@ -67,6 +67,7 @@
 
 <script _src="ROOT_URL . '/view/js/analytics.js'"></script>
 <script _src="ROOT_URL . '/view/js/main.js'"></script>
+<script _src="ROOT_URL . '/view/js/account/users.js'"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID-->
 <script>(function (i, s, o, g, r, a, m) {
