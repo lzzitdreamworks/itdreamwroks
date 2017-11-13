@@ -20,6 +20,14 @@ class mainCtrl extends \L {
     }
 
     /**
+     * 描述 : 退出帐号
+     * 作者 : sunrise.lzz
+     */
+    public function logout() {
+        \L::header(ROOT_URL . '/index.php');
+    }
+
+    /**
      * 描述 : CLI模式提示
      * 作者 : sunrise.lzz
      */

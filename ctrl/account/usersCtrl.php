@@ -17,6 +17,7 @@ class usersCtrl extends \L
      * 作者 : sunrise.lzz
      */
     public function login() {
+        echo "<pre>"; print_r($_SESSION); exit();
         $this->display('/account/signin.html');
     }
 
@@ -71,6 +72,7 @@ class usersCtrl extends \L
             if (!empty($userInfo)) {
                 echo "登录成功";
                 $_SESSION['userInfo'] = $usersModel;
+                // \L::header(ROOT_URL . '/index.php');
             } else {
                 echo "账号或密码错误";
             }
@@ -84,7 +86,7 @@ class usersCtrl extends \L
      * 作者 : sunrise.lzz
      */
     public function logout() {
-        L::header(ROOT_URL . '/index.php');
+        \L::header(ROOT_URL . '/index.php');
     }
 
     /**
@@ -131,6 +133,7 @@ class usersCtrl extends \L
         }
         if($usersModel->addUser($email, $password) > 0) {
             echo "注册成功";
+            L::header(ROOT_URL . '/index.php');
         }
 
     }

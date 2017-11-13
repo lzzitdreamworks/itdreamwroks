@@ -11,7 +11,7 @@ if (PHP_SAPI === 'cli') {
     //默认调度
     $_GET += array('c' => 'mainCtrl', 'a' => 'cliTip');
 //已登录
-} else if (false) {
+} else if (true) {
     //默认调度
     $_GET += array('c' => 'mainCtrl', 'a' => 'index');
     //无权访问
