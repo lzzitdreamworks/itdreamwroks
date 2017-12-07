@@ -1,0 +1,125 @@
+Ubuntu 16.04 Vim安装及配置：http://www.cnblogs.com/ace-wu/p/6273031.html
+Ubuntu16.04 apache2配置虚拟主机：http://blog.csdn.net/alex_15/article/details/61413280
+		https://segmentfault.com/a/1190000002517469
+容器技术-Docker：http://opswiki.kokoerp.com/index.php/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF-Docker#.E4.B8.BAdocker.E6.B7.BB.E5.8A.A0.E7.A7.81.E6.9C.89.E4.BB.93.E5.BA.93.E5.9C.B0.E5.9D.80
+
+Unbuntu安装 Navicat：https://kelvin.mbioq.com/2016/12/03/install-premium-navicat-on-ubuntu1604.html
+
+ubuntu16.04安装git和配置ssh： http://blog.csdn.net/qq_26990831/article/details/51857399
+
+Vim命令合集：http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html
+
+在Ubuntu系统上配置Apache支持多个站点：http://blog.csdn.net/naturebe/article/details/54933844
+
+
+本地MySql访问：mysql -h 127.0.0.1 -P 3306 -uroot -p330lzz
+本地MySql通过Phpmyadmin访问: http://www.phpmyadmin.com
+启动Navicat命令: 切到这个start_navicat文件所在当前目录，并使用终端命令：./start_navicat
+
+ubuntu16.04下github的安装和使用: http://blog.csdn.net/shursulei/article/details/73017668?utm_source=itdadao&utm_medium=referral
+
+ubuntu上传代码文件到github：http://blog.csdn.net/tianya_team/article/details/72454473
+
+oFrame框架文档：http://phpof.net/
+
+Git 常用命令集：
+1) cd要上传的仓库路径
+	git add README
+	git commit -m "first commit"
+2）上传到github
+	git push origin master
+注意：git push命令将本地仓库推送到远程服务器，git pull相反。
+注意：在上面提交命令后，可能会出现“因为您当前分支的最新提交落后于其对应的远程分支”等类似错误，
+需要先获取远端更新并与本地合并，再git push。
+合并操作如下：
+git fetch origin   //获取远程更新
+git merge origin/master
+在git push则可以成功。
+如果想要添加所有文件，可以使用“git add .”代替。
+git diff 文件
+
+
+http://blog.csdn.net/julian_1/article/details/70554487?utm_source=itdadao&utm_medium=referral
+
+
+查看端口使用情况，使用netstat命令。
+查看已经连接的服务端口（ESTABLISHED
+　　netstat -a
+查看所有的服务端口（LISTEN，ESTABLISHED）
+    netstat -ap
+查看8080端口，则可以结合grep命令：
+    netstat -ap | grep 8080
+如查看8888端口，则在终端中输入：
+lsof -i:8888
+若要停止使用这个端口的程序，使用kill +对应的pid即可
+
+11 如何显示./home目录下隐藏的文件
+快捷键ctrl+H
+
+12 ubuntu打开任务管理起
+
+gnome-system-monitor
+
+
+使用Hexo+Github+Ubuntu搭建博客
+http://blog.csdn.net/sysushui/article/details/54585905
+ERROR Deployer not found : git 的问题解决
+http://blog.csdn.net/crow1108/article/details/50445671
+http://blog.csdn.net/a1274624994/article/details/54749094
+http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88
+
+
+
+
+
+1.多行注释：
+  1. 首先按esc进入命令行模式下，按下Ctrl + v，进入列（也叫区块）模式;
+  2. 在行首使用上下键选择需要注释的多行;
+  3. 按下键盘（大写）“I”键，进入插入模式；
+  4. 然后输入注释符（“//”、“#”等）;
+  5. 最后按下“Esc”键。 注：在按下esc键后，会稍等一会才会出现注释，不要着急~~时间很短的
+git学习--使用git pull命令"当前分支没有跟踪信息"报错问题的解决：http://blog.csdn.net/qq_33429968/article/details/68491426
+https://www.cnblogs.com/xiangyangzhu/p/5316041.html
+
+ 
+2.删除多行注释：
+  1. 首先按esc进入命令行模式下，按下Ctrl + v, 进入列模式;
+  2. 选定要取消注释的多行;
+  3. 按下“x”或者“d”. 注意：如果是“//”注释，那需要执行两次该操作，如果是“#”注释，一次即可
+=====================
+3.多行删除
+1.首先在命令模式下，输入“：set nu”显示行号； 2.通过行号确定你要删除的行； 3.命令输入“：32,65d”,回车键，32-65行就被删除了，很快捷吧
+如果无意中删除错了，可以使用‘u’键恢复（命令模式下）
+
+
+/dev/sda1:clean  磁盘空间占满问题：
+cd /var/log/cups/
+/var/log/cups$ ll
+ps -ef |grep cups
+
+解决方式：http://m.blog.csdn.net/yangguangmeng/article/details/40687697
+
+
+配置虚拟主机（域名步骤）
+
+1, /etc/hosts 虚拟主机映射的IP地址
+2, 在/etc/apache2/sites-available目录下复制一份默认的虚拟主机文件叫000-default.conf并配置
+3,重启apache服务器：sudo service apache2 restart
+4,激活刚复制的.conf配置文件。他的作用是生产一份链接到/etc/apache2/sites-enabled/ 
+5, 激活 sudo a2dissite 000-default.conf (**这一步不是必须的**)
+	sudo a2ensite  yiidemo.conf
+6, sudo chmod -r 755 项目目录
+
+
+Navicat破解： http://blog.csdn.net/happy_bigqiang/article/details/54234559
+
+MySQL分区：http://blog.csdn.net/laoyang360/article/details/52886987
+
+
+
+
+
+
+
+
+
